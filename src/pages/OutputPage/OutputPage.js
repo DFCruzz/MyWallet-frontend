@@ -1,26 +1,45 @@
 import styled from "styled-components";
 
-export const RegisterWrapper = styled.div`
+const OutputPage = () => {
+    return (
+        <OutputWrapper>
+            <h1>
+                Nova Entrada
+            </h1>
+            <form>
+                <input type="text" placeholder="Valor"/>
+                <input type="text" placeholder="Descrição"/>
+                <button>
+                    Salvar Saída
+                </button>
+            </form>
+        </OutputWrapper>
+    )
+}
+
+export default OutputPage
+
+const OutputWrapper = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #8C11BE;
 
     h1 {
-        font-family: 'Saira Stencil One', cursive;
-        font-weight: 400;
-        font-size: 32px;
-        margin-bottom: 24px;
+        width: 90%;
         color: #FFFFFF;
+        font-weight: 700;
+        font-size: 26px;
+        margin-bottom: 40px;
+        margin-top: 25px;
     }
 
     form {
+        width: 90%;
         display: flex;
         flex-direction: column;
-        width: 90%;
 
         input {
             height: 54px;
@@ -33,7 +52,7 @@ export const RegisterWrapper = styled.div`
             font-weight: 400;
         }
     }
-    
+
     button {
         background-color: #A328D6;
         color: #FFFFFF;
@@ -47,11 +66,4 @@ export const RegisterWrapper = styled.div`
         border-radius: 5px;
         margin-bottom: 36px;
     }
-
-    p {
-        font-size: 15px;
-        font-weight: 700;
-        color: #FFFFFF;
-    }
 `
-
