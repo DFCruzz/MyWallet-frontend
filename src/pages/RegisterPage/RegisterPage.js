@@ -5,7 +5,8 @@ import { useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import env from "react-dotenv"
-import { toast } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 
 
@@ -63,7 +64,7 @@ const RegisterPage = ({ }) => {
             }
             
             else {
-                toast.error("Erro ao cadastras usuário", {
+                toast.error("Erro ao cadastrar usuário", {
                     position: "top-center",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -84,6 +85,7 @@ const RegisterPage = ({ }) => {
 
     return (
         <RegisterWrapper>
+            <ToastContainer />
             <h1>
                 MyWallet
             </h1>
@@ -114,6 +116,7 @@ const RegisterPage = ({ }) => {
                     placeholder="Confirme a senha..."
                     value={user.confirmPassword}
                     onChange={e => setUser({...user, confirmPassword: e.target.value})}
+                    disabled={isLoading}
                 />
                 <StyledButton>
                     Cadastrar
