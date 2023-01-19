@@ -53,7 +53,11 @@ const LoginPage = () => {
                 progress: undefined,
                 theme: "dark",
             })
+            console.log(error)
         })
+
+        setIsLoading(false)
+        
     }
 
     return (
