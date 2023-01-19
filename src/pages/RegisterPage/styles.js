@@ -17,37 +17,6 @@ export const RegisterWrapper = styled.div`
         color: #FFFFFF;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-
-        input {
-            height: 54px;
-            width: 100%;
-            padding: 0 12px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            margin-bottom: 14px;
-            font-size: 20px;
-            font-weight: 400;
-        }
-    }
-    
-    button {
-        background-color: #A328D6;
-        color: #FFFFFF;
-        width: 100%;
-        height: 46px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        font-weight: 700;
-        border-radius: 5px;
-        margin-bottom: 36px;
-    }
-
     p {
         font-size: 15px;
         font-weight: 700;

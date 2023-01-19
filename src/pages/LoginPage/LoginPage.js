@@ -1,3 +1,5 @@
+import StyledButton from "../../components/StyledButton"
+import StyledForm from "../../components/StyledForm"
 import { LoginWrapper } from "./styles"
 
 const LoginPage = () => {
@@ -6,13 +8,13 @@ const LoginPage = () => {
             <h1>
                 MyWallet
             </h1>
-            <form>
+            <StyledForm>
                 <input type="email" placeholder="E-mail..."/>
                 <input type="password" placeholder="Senha..."/>
-                <button>
+                <StyledButton>
                     Entrar
-                </button>
-            </form>
+                </StyledButton>
+            </StyledForm>
             <p>
                 Primeira vez? Cadastre-se
             </p>

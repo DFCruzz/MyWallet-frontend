@@ -1,3 +1,5 @@
+import StyledButton from "../../components/StyledButton"
+import StyledForm from "../../components/StyledForm"
 import { RegisterWrapper } from "./styles"
 
 
@@ -8,15 +10,15 @@ const RegisterPage = () => {
             <h1>
                 MyWallet
             </h1>
-            <form>
+            <StyledForm>
                 <input type="text" placeholder="Nome..."/>
                 <input type="email" placeholder="E-mail.." />
                 <input type="password" placeholder="Senha..."/>
                 <input type="password" placeholder="Confirme a senha..."/>
-                <button>
+                <StyledButton>
                     Cadastrar
-                </button>
-            </form>
+                </StyledButton>
+            </StyledForm>
             <p>
                 Já tem uma conta? Entre agora!
             </p>
