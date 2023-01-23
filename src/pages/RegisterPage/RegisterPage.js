@@ -4,7 +4,6 @@ import { RegisterWrapper } from "./styles"
 import { useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
-import env from "react-dotenv"
 import { toast, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -28,24 +27,14 @@ const RegisterPage = ({ }) => {
     function signUpSubmit(e) {
         e.preventDefault()
 
-        const request = axios.post(`${process.env.REACT_APP_API_URL}/cadastro`, user)
+        const request = axios.post(`${process.env.REACT_APP_API_URL}/sign-up`, user)
 
         setIsLoading(true)
 
         request.then(e => {
             console.log(e.data)
-            toast.success("Usuário Cadastrado com Sucesso!", {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            })
-            navigate("/")
             setIsLoading(false)
+            navigate("/")
         })
 
         request.catch(e => {

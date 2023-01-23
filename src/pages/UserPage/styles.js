@@ -59,6 +59,10 @@ export const DataBox = styled.div`
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 
+    h1 {
+        margin: auto;
+    }
+
     div {
         width: 100%;
         display: flex;
@@ -68,6 +72,14 @@ export const DataBox = styled.div`
             font-weight: 400;
             margin-top: 8px;
             padding: 0 4px;
+        }
+
+        .amount {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 8px;
+            padding: 0 4px;
+            color: ${props => (props.type === "input" ? "#03AC00" : "#C70000")} 
         }
     }
 `

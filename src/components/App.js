@@ -4,13 +4,17 @@ import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import InputPage from "../pages/InputPage/InputPage";
 import OutputPage from "../pages/OutputPage/OutputPage";
 import UserPage from "../pages/UserPage/UserPage";
-import { AuthContext, AuthProvider } from "../contexts/AuthContext";
+import UserContext from "../contexts/UserContext";
+import { useState } from "react";
 
 
 function App() {
+
+    const [user, setUser] = useState(null)
+
     return (
-        <BrowserRouter>
-            <AuthProvider>
+        <UserContext.Provider value={{user, setUser}}>
+            <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<LoginPage />} />
                     <Route path="/cadastro" element={<RegisterPage />} />
@@ -18,8 +22,9 @@ function App() {
                     <Route path="/nova-entrada" element={<InputPage />} />
                     <Route path="/nova-saida" element={<OutputPage />} />
                 </Routes>
-            </AuthProvider>
-        </BrowserRouter>
+            </BrowserRouter>
+        </UserContext.Provider>
+
     )
 }
 
